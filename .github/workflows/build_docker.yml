@@ -1,4 +1,4 @@
-name: Build and push main image
+name: Build
 
 on:
   push:
@@ -13,4 +13,6 @@ jobs:
         uses: actions/checkout@main
 
       - name: "build"
-        run: npm run build
+        run: |
+          npm run build
+          ls -a
