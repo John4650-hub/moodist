@@ -2,8 +2,7 @@ name: Build and push main image
 
 on:
   push:
-    tags:
-      - '*'
+    branches: [ "main" ]
 
 jobs:
   push-store-image:
