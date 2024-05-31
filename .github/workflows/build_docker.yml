@@ -14,5 +14,6 @@ jobs:
 
       - name: "build"
         run: |
+          npm install
           npm run build
           ls -a
