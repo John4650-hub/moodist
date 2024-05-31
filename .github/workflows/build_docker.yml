@@ -16,4 +16,9 @@ jobs:
         run: |
           npm install
           npm run build
-          ls -a
+          zip -r dist.zip dist 
+          gh release create ${{ github.run_number }}.0.0 dist.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.TK }}
+        shell: bash
+        
